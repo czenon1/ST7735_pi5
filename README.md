@@ -6,6 +6,63 @@ A Python library to control the ST7735 display on a Raspberry Pi 5 using `lgpio`
 Allows simple drawing on the display without installing a kernel module.
 
 Designed specifically to work with a ST7735 based 128x160 pixel TFT SPI display. (Specifically the 0.96" SPI LCD from Pimoroni).
+## Building
+Instructions from Pypa's[guide](https://github.com/pypa/packaging.python.org/blob/main/source/tutorials/packaging-projects.rst?plain=true)
+
+### Generating distribution archives
+
+The next step is to generate :term:`distribution packages <Distribution Package>`
+for the package. These are archives that are uploaded to the Python
+Package Index and can be installed by :ref:`pip`.
+
+Make sure you have the latest version of PyPA's :ref:`build` installed:
+
+.. tab:: Unix/macOS
+
+    .. code-block:: bash
+
+        python3 -m pip install --upgrade build
+
+.. tab:: Windows
+
+    .. code-block:: bat
+
+        py -m pip install --upgrade build
+
+.. tip:: If you have trouble installing these, see the
+   :doc:`installing-packages` tutorial.
+
+Now run this command from the same directory where :file:`pyproject.toml` is located:
+
+.. tab:: Unix/macOS
+
+    .. code-block:: bash
+
+        python3 -m build
+
+.. tab:: Windows
+
+    .. code-block:: bat
+
+        py -m build
+
+This command should output a lot of text and once completed should generate two
+files in the :file:`dist` directory:
+
+.. code-block:: text
+
+    dist/
+    ├── example_package_YOUR_USERNAME_HERE-0.0.1-py3-none-any.whl
+    └── example_package_YOUR_USERNAME_HERE-0.0.1.tar.gz
+
+
+The ``tar.gz`` file is a :term:`source distribution <Source Distribution (or "sdist")>`
+whereas the ``.whl`` file is a :term:`built distribution <Built Distribution>`.
+Newer :ref:`pip` versions preferentially install built distributions, but will
+fall back to source distributions if needed. You should always upload a source
+distribution and provide built distributions for the platforms your project is
+compatible with. In this case, our example package is compatible with Python on
+any platform so only one built distribution is needed.
 
 ## Installing
 
