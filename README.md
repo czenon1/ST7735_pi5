@@ -17,44 +17,38 @@ Package Index and can be installed by :ref:`pip`.
 
 Make sure you have the latest version of PyPA's :ref:`build` installed:
 
-.. tab:: Unix/macOS
-
-    .. code-block:: bash
-
-        python3 -m pip install --upgrade build
-
-.. tab:: Windows
-
-    .. code-block:: bat
-
-        py -m pip install --upgrade build
-
-.. tip:: If you have trouble installing these, see the
-   :doc:`installing-packages` tutorial.
+**Unix/macOS :**
+```bash
+    python3 -m pip install --upgrade build
+```
+**Windows :**
+```bat
+    py -m pip install --upgrade build
+```
+*If you have trouble installing these, see the *`installing-packages`*tutorial.*
 
 Now run this command from the same directory where :file:`pyproject.toml` is located:
 
-.. tab:: Unix/macOS
-
-    .. code-block:: bash
-
+**Unix/macOS :**
+```bash
         python3 -m build
+```
 
-.. tab:: Windows
-
-    .. code-block:: bat
-
+**Windows :**
+```bat
         py -m build
+```
 
 This command should output a lot of text and once completed should generate two
 files in the :file:`dist` directory:
 
-.. code-block:: text
+```text
 
     dist/
     ├── example_package_YOUR_USERNAME_HERE-0.0.1-py3-none-any.whl
     └── example_package_YOUR_USERNAME_HERE-0.0.1.tar.gz
 
+```
 
 The ``tar.gz`` file is a :term:`source distribution <Source Distribution (or "sdist")>`
 whereas the ``.whl`` file is a :term:`built distribution <Built Distribution>`.
