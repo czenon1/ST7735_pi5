@@ -5,7 +5,7 @@
 A Python library to control the ST7735 display on a Raspberry Pi 5 using `lgpio` and `spidev`.
 Allows simple drawing on the display without installing a kernel module.
 
-Designed specifically to work with a ST7735 based 160x80 pixel TFT SPI display. (Specifically the 0.96" SPI LCD from Pimoroni).
+Designed specifically to work with a ST7735 based 128x160 pixel TFT SPI display. (Specifically the 0.96" SPI LCD from Pimoroni).
 
 ## Installing
 
