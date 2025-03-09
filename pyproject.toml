@@ -3,19 +3,20 @@ requires = ["hatchling", "hatch-fancy-pypi-readme"]
 build-backend = "hatchling.build"
 
 [project]
-name = "st7735"
+name = "st7735_pi5"
 dynamic = ["version", "readme"]
-description = "Library to control an ST7735 168x80 TFT LCD display."
+description = "Library to control an ST7735 160x320 TFT LCD display."
 license = {file = "LICENSE"}
 requires-python = ">= 3.7"
 authors = [
-    { name = "Philip Howard", email = "phil@pimoroni.com" },
+    { name = "Christopher Zénon-Fall", email = "" },
 ]
 maintainers = [
-    { name = "Philip Howard", email = "phil@pimoroni.com" },
+    { name = "Christopher Zénon-Fall", email = "" },
 ]
 keywords = [
     "Pi",
+    "Pi 5",
     "Raspberry",
     "displays"
 ]
@@ -41,7 +42,8 @@ dependencies = [
 ]
 
 [project.urls]
-GitHub = "https://www.github.com/pimoroni/st7735-python"
+GitHub = "https://github.com/czenon1/ST7735_pi5"
+Original GitHub project = "https://www.github.com/pimoroni/st7735-python"
 Homepage = "https://www.pimoroni.com"
 
 [tool.hatch.version]

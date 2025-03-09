@@ -16,21 +16,12 @@ def st7735():
 
 
 @pytest.fixture(scope="function", autouse=False)
-def gpiod():
-    """Mock gpiod module."""
-    sys.modules["gpiod"] = mock.MagicMock()
-    sys.modules["gpiod.line"] = mock.MagicMock()
-    yield sys.modules["gpiod"]
-    del sys.modules["gpiod"]
-
-
-@pytest.fixture(scope="function", autouse=False)
-def gpiodevice():
-    """Mock gpiodevice module."""
-    sys.modules["gpiodevice"] = mock.MagicMock()
-    sys.modules["gpiodevice"].get_pin.return_value = (mock.Mock(), 0)
-    yield sys.modules["gpiodevice"]
-    del sys.modules["gpiodevice"]
+def lgpio():
+    """Mock lgpio module."""
+    sys.modules["lgpio"] = mock.MagicMock()
+    sys.modules["lgpio.line"] = mock.MagicMock()
+    yield sys.modules["lgpio"]
+    del sys.modules["lgpio"]
 
 
 @pytest.fixture(scope="function", autouse=False)
