@@ -31,12 +31,12 @@ Now run this command from the same directory where :file:`pyproject.toml` is loc
 
 **Unix/macOS :**
 ```bash
-        python3 -m build
+    python3 -m build
 ```
 
 **Windows :**
 ```bat
-        py -m build
+    py -m build
 ```
 
 This command should output a lot of text and once completed should generate two
